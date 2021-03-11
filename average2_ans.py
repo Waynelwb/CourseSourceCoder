@@ -30,7 +30,7 @@ while True:
             highest = number
     except ValueError as err:
         print(err)
-
+# 将输入的数组成列表并且得到最大值和最小值
 swapped = True
 while swapped:
     swapped = False
@@ -42,15 +42,16 @@ while swapped:
             numbers[index] = numbers[index + 1]
             numbers[index + 1] = temp
             swapped = True
-
+# 为列表进行排序
 if numbers:
     index = int(len(numbers) / 2)
     median = numbers[index]
     if index and index * 2 == len(numbers):
         median = (median + numbers[index - 1]) / 2
-
+# 判断列表中有奇数个数还是偶数个数并且求出中间值
 print("numbers:", numbers)
 if numbers:
     print("count =", len(numbers), "total =", total,
           "lowest =", lowest, "highest =", highest,
           "mean =", total / len(numbers), "median =", median)
+# 打印出需要的所有数值
